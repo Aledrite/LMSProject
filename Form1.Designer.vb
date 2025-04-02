@@ -27,15 +27,16 @@ Partial Class Form1
         btnUsers = New Button()
         btnRegister = New Button()
         Label1 = New Label()
-        btnRented = New Button()
         PictureBox1 = New PictureBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnBrowse
         ' 
+        btnBrowse.FlatAppearance.BorderSize = 0
+        btnBrowse.FlatStyle = FlatStyle.Flat
         btnBrowse.Font = New Font("Prestige Elite Std", 15.7499981F, FontStyle.Bold)
-        btnBrowse.ForeColor = Color.DarkSlateGray
+        btnBrowse.ForeColor = Color.Black
         btnBrowse.Image = CType(resources.GetObject("btnBrowse.Image"), Image)
         btnBrowse.Location = New Point(16, 193)
         btnBrowse.Name = "btnBrowse"
@@ -47,24 +48,32 @@ Partial Class Form1
         ' 
         ' btnUsers
         ' 
+        btnUsers.FlatAppearance.BorderSize = 0
+        btnUsers.FlatStyle = FlatStyle.Flat
         btnUsers.Font = New Font("Prestige Elite Std", 15.7499981F, FontStyle.Bold)
-        btnUsers.ForeColor = Color.DarkSlateGray
-        btnUsers.Location = New Point(262, 193)
+        btnUsers.ForeColor = Color.Black
+        btnUsers.Image = My.Resources.Resources.UserList
+        btnUsers.Location = New Point(391, 193)
         btnUsers.Name = "btnUsers"
-        btnUsers.Size = New Size(240, 240)
+        btnUsers.Size = New Size(240, 250)
         btnUsers.TabIndex = 1
         btnUsers.Text = "User List"
+        btnUsers.TextAlign = ContentAlignment.BottomCenter
         btnUsers.UseVisualStyleBackColor = True
         ' 
         ' btnRegister
         ' 
+        btnRegister.FlatAppearance.BorderSize = 0
+        btnRegister.FlatStyle = FlatStyle.Flat
         btnRegister.Font = New Font("Prestige Elite Std", 15.7499981F, FontStyle.Bold)
-        btnRegister.ForeColor = Color.DarkSlateGray
-        btnRegister.Location = New Point(508, 193)
+        btnRegister.ForeColor = Color.Black
+        btnRegister.Image = My.Resources.Resources.registerbooks
+        btnRegister.Location = New Point(746, 180)
         btnRegister.Name = "btnRegister"
-        btnRegister.Size = New Size(240, 240)
+        btnRegister.Size = New Size(240, 273)
         btnRegister.TabIndex = 2
         btnRegister.Text = "Register Book"
+        btnRegister.TextAlign = ContentAlignment.BottomCenter
         btnRegister.UseVisualStyleBackColor = True
         ' 
         ' Label1
@@ -77,17 +86,6 @@ Partial Class Form1
         Label1.Size = New Size(458, 54)
         Label1.TabIndex = 3
         Label1.Text = "Hermes' Archive"
-        ' 
-        ' btnRented
-        ' 
-        btnRented.Font = New Font("Prestige Elite Std", 15.7499981F, FontStyle.Bold)
-        btnRented.ForeColor = Color.DarkSlateGray
-        btnRented.Location = New Point(754, 193)
-        btnRented.Name = "btnRented"
-        btnRented.Size = New Size(240, 240)
-        btnRented.TabIndex = 4
-        btnRented.Text = "Check Rented Books"
-        btnRented.UseVisualStyleBackColor = True
         ' 
         ' PictureBox1
         ' 
@@ -106,7 +104,6 @@ Partial Class Form1
         BackColor = Color.SandyBrown
         ClientSize = New Size(1008, 561)
         Controls.Add(PictureBox1)
-        Controls.Add(btnRented)
         Controls.Add(Label1)
         Controls.Add(btnRegister)
         Controls.Add(btnUsers)
@@ -122,7 +119,6 @@ Partial Class Form1
     Friend WithEvents btnUsers As Button
     Friend WithEvents btnRegister As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnRented As Button
     Friend WithEvents PictureBox1 As PictureBox
 
 End Class

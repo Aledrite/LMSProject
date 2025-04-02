@@ -26,9 +26,9 @@ Partial Class BrowseForm
         lblEntry = New Label()
         Label1 = New Label()
         Panel2 = New Panel()
-        btnResetFilters = New Button()
-        CheckBox1 = New CheckBox()
+        txtBoxBookID = New TextBox()
         Label2 = New Label()
+        btnResetFilters = New Button()
         btnApplyFilter = New Button()
         nudYearTo = New NumericUpDown()
         nudYearFrom = New NumericUpDown()
@@ -51,11 +51,10 @@ Partial Class BrowseForm
         ' 
         pnlEntryDisplay.AutoScroll = True
         pnlEntryDisplay.BackColor = Color.Peru
-        pnlEntryDisplay.BorderStyle = BorderStyle.FixedSingle
         pnlEntryDisplay.Controls.Add(lblEntry)
         pnlEntryDisplay.Location = New Point(12, 12)
         pnlEntryDisplay.Name = "pnlEntryDisplay"
-        pnlEntryDisplay.Size = New Size(584, 584)
+        pnlEntryDisplay.Size = New Size(584, 537)
         pnlEntryDisplay.TabIndex = 0
         ' 
         ' lblEntry
@@ -70,8 +69,9 @@ Partial Class BrowseForm
         ' 
         ' Label1
         ' 
+        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label1.AutoSize = True
-        Label1.Font = New Font("Prestige Elite Std", 36.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Prestige Elite Std", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.DarkSlateGray
         Label1.Location = New Point(770, 9)
         Label1.Name = "Label1"
@@ -81,11 +81,11 @@ Partial Class BrowseForm
         ' 
         ' Panel2
         ' 
+        Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Panel2.BackColor = Color.Peru
-        Panel2.BorderStyle = BorderStyle.FixedSingle
-        Panel2.Controls.Add(btnResetFilters)
-        Panel2.Controls.Add(CheckBox1)
+        Panel2.Controls.Add(txtBoxBookID)
         Panel2.Controls.Add(Label2)
+        Panel2.Controls.Add(btnResetFilters)
         Panel2.Controls.Add(btnApplyFilter)
         Panel2.Controls.Add(nudYearTo)
         Panel2.Controls.Add(nudYearFrom)
@@ -101,6 +101,23 @@ Partial Class BrowseForm
         Panel2.Size = New Size(394, 454)
         Panel2.TabIndex = 2
         ' 
+        ' txtBoxBookID
+        ' 
+        txtBoxBookID.Location = New Point(3, 286)
+        txtBoxBookID.Name = "txtBoxBookID"
+        txtBoxBookID.Size = New Size(100, 23)
+        txtBoxBookID.TabIndex = 14
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Prestige Elite Std", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(3, 265)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(78, 18)
+        Label2.TabIndex = 13
+        Label2.Text = "Book ID"
+        ' 
         ' btnResetFilters
         ' 
         btnResetFilters.Font = New Font("Prestige Elite Std", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -110,26 +127,6 @@ Partial Class BrowseForm
         btnResetFilters.TabIndex = 12
         btnResetFilters.Text = "Reset"
         btnResetFilters.UseVisualStyleBackColor = True
-        ' 
-        ' CheckBox1
-        ' 
-        CheckBox1.AutoSize = True
-        CheckBox1.FlatStyle = FlatStyle.Flat
-        CheckBox1.Location = New Point(104, 271)
-        CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(12, 11)
-        CheckBox1.TabIndex = 11
-        CheckBox1.UseVisualStyleBackColor = True
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Prestige Elite Std", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(5, 269)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(98, 18)
-        Label2.TabIndex = 10
-        Label2.Text = "Available"
         ' 
         ' btnApplyFilter
         ' 
@@ -227,6 +224,7 @@ Partial Class BrowseForm
         ' 
         ' btnReturn
         ' 
+        btnReturn.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnReturn.Font = New Font("Prestige Elite Std", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnReturn.Location = New Point(808, 526)
         btnReturn.Name = "btnReturn"
@@ -237,6 +235,7 @@ Partial Class BrowseForm
         ' 
         ' btnRefresh
         ' 
+        btnRefresh.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnRefresh.Font = New Font("Prestige Elite Std", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnRefresh.Location = New Point(602, 526)
         btnRefresh.Name = "btnRefresh"
@@ -281,10 +280,10 @@ Partial Class BrowseForm
     Friend WithEvents lblYearPublished As Label
     Friend WithEvents nudYearTo As NumericUpDown
     Friend WithEvents nudYearFrom As NumericUpDown
-    Friend WithEvents Label2 As Label
     Friend WithEvents btnApplyFilter As Button
-    Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents btnRefresh As Button
     Friend WithEvents lblEntry As Label
     Friend WithEvents btnResetFilters As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtBoxBookID As TextBox
 End Class

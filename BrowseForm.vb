@@ -13,33 +13,12 @@ Public Class BrowseForm
         ResetFilters()
 
         Me.ControlBox = False
-        Dim exampleDetails As New Dictionary(Of String, String)
-        exampleDetails("bookName") = "TetoLands"
-        exampleDetails("bookID") = "12345"
-        exampleDetails("bookAuthor") = "F. Scott Fitzgerald"
-        exampleDetails("bookSubject") = "Fantasy"
-        exampleDetails("yearPublished") = "1925"
-
-        GlobalVariables.Books(0) = exampleDetails
-
-        Dim exampleDetails1 As New Dictionary(Of String, String)
-        exampleDetails1("bookName") = "Test2"
-        exampleDetails1("bookID") = "08625"
-        exampleDetails1("bookAuthor") = "Fred"
-        exampleDetails1("bookSubject") = "Science Fiction"
-        exampleDetails1("yearPublished") = "1987"
-
-        GlobalVariables.Books(1) = exampleDetails1
-
-
-
     End Sub
 
     Private Sub btnReturn_Click(sender As Object, e As EventArgs) Handles btnReturn.Click
         Hide()
         Dispose()
         Form1.Show()
-
     End Sub
 
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
@@ -68,6 +47,15 @@ Public Class BrowseForm
                         If attr.Value = Filters(attr.Key) Then
                             matching = True
                         End If
+                    ElseIf attr.Key = "yearPublished" Then
+                        Dim yrPublished = Val(attr.Value)
+                        Dim yrFrom = Filters("yearPublishedFrom")
+                        Dim yrTo = Filters("yearPublishedTo")
+
+                        If yrPublished >= yrFrom And yrPublished <= yrTo Then
+                            matching = True
+                        End If
+
                     End If
                 End If
 
@@ -91,6 +79,7 @@ Public Class BrowseForm
         End If
         Filters("yearPublishedFrom") = nudYearFrom.Value
         Filters("yearPublishedTo") = nudYearTo.Value
+        Filters("bookID") = txtBoxBookID.Text
     End Sub
 
     Private Sub ResetFilters()
