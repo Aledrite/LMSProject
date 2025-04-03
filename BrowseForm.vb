@@ -5,6 +5,7 @@ Public Class BrowseForm
     Shared startingPoint = New Point(3, 3)
     Shared yOffset = 50
 
+
     Shared Filters As New Dictionary(Of String, String)
     Shared ApplyFilters = False
 
@@ -34,17 +35,24 @@ Public Class BrowseForm
             Dim newLabel As New Label
             newLabel.Location = New Point(3, 3 + (20 * index))
             newLabel.Font = templateLabel.Font
+            newLabel.ForeColor = templateLabel.ForeColor
             newLabel.AutoSize = True
+            newLabel.AccessibleRole = AccessibleRole.Text
+
 
             If Not ApplyFilters Then
                 matching = True
             End If
 
+
+            newLabel.Text = newLabel.Text & indexKey.ToString & " | "
+
             For Each attr As KeyValuePair(Of String, String) In book
-                newLabel.Text = newLabel.Text & attr.Value & "  ,  "
+                newLabel.Text = newLabel.Text & attr.Value & " | "
+
                 If Not matching Then
                     If Filters.ContainsKey(attr.Key) Then
-                        If attr.Value = Filters(attr.Key) Then
+                        If attr.Value = Filters(attr.Key) And Not attr.Value = "" Then
                             matching = True
                         End If
                     ElseIf attr.Key = "yearPublished" Then
@@ -57,6 +65,7 @@ Public Class BrowseForm
                         End If
 
                     End If
+
                 End If
 
             Next
@@ -79,13 +88,14 @@ Public Class BrowseForm
         End If
         Filters("yearPublishedFrom") = nudYearFrom.Value
         Filters("yearPublishedTo") = nudYearTo.Value
-        Filters("bookID") = txtBoxBookID.Text
+
     End Sub
 
     Private Sub ResetFilters()
         ApplyFilters = False
         txtBoxAuthor.Clear()
         txtBoxTitle.Clear()
+
     End Sub
 
     Private Sub btnResetFilters_Click(sender As Object, e As EventArgs) Handles btnResetFilters.Click

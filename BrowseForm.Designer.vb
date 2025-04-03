@@ -26,8 +26,6 @@ Partial Class BrowseForm
         lblEntry = New Label()
         Label1 = New Label()
         Panel2 = New Panel()
-        txtBoxBookID = New TextBox()
-        Label2 = New Label()
         btnResetFilters = New Button()
         btnApplyFilter = New Button()
         nudYearTo = New NumericUpDown()
@@ -41,6 +39,7 @@ Partial Class BrowseForm
         txtBoxAuthor = New TextBox()
         btnReturn = New Button()
         btnRefresh = New Button()
+        Label3 = New Label()
         pnlEntryDisplay.SuspendLayout()
         Panel2.SuspendLayout()
         CType(nudYearTo, ComponentModel.ISupportInitialize).BeginInit()
@@ -52,25 +51,26 @@ Partial Class BrowseForm
         pnlEntryDisplay.AutoScroll = True
         pnlEntryDisplay.BackColor = Color.Peru
         pnlEntryDisplay.Controls.Add(lblEntry)
-        pnlEntryDisplay.Location = New Point(12, 12)
+        pnlEntryDisplay.Location = New Point(12, 66)
         pnlEntryDisplay.Name = "pnlEntryDisplay"
-        pnlEntryDisplay.Size = New Size(584, 537)
+        pnlEntryDisplay.Size = New Size(752, 454)
         pnlEntryDisplay.TabIndex = 0
         ' 
         ' lblEntry
         ' 
         lblEntry.AutoSize = True
-        lblEntry.Font = New Font("Prestige Elite Std", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblEntry.ForeColor = Color.DarkSlateGray
+        lblEntry.Font = New Font("Prestige Elite Std", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblEntry.ForeColor = Color.MintCream
         lblEntry.Location = New Point(3, 3)
         lblEntry.Name = "lblEntry"
-        lblEntry.Size = New Size(0, 15)
+        lblEntry.Size = New Size(0, 18)
         lblEntry.TabIndex = 0
         ' 
         ' Label1
         ' 
         Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Prestige Elite Std", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.DarkSlateGray
         Label1.Location = New Point(770, 9)
@@ -83,8 +83,6 @@ Partial Class BrowseForm
         ' 
         Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Panel2.BackColor = Color.Peru
-        Panel2.Controls.Add(txtBoxBookID)
-        Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(btnResetFilters)
         Panel2.Controls.Add(btnApplyFilter)
         Panel2.Controls.Add(nudYearTo)
@@ -96,27 +94,10 @@ Partial Class BrowseForm
         Panel2.Controls.Add(txtBoxTitle)
         Panel2.Controls.Add(lblAuthor)
         Panel2.Controls.Add(txtBoxAuthor)
-        Panel2.Location = New Point(602, 66)
+        Panel2.Location = New Point(770, 66)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(394, 454)
+        Panel2.Size = New Size(226, 454)
         Panel2.TabIndex = 2
-        ' 
-        ' txtBoxBookID
-        ' 
-        txtBoxBookID.Location = New Point(3, 286)
-        txtBoxBookID.Name = "txtBoxBookID"
-        txtBoxBookID.Size = New Size(100, 23)
-        txtBoxBookID.TabIndex = 14
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Prestige Elite Std", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(3, 265)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(78, 18)
-        Label2.TabIndex = 13
-        Label2.Text = "Book ID"
         ' 
         ' btnResetFilters
         ' 
@@ -237,25 +218,42 @@ Partial Class BrowseForm
         ' 
         btnRefresh.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnRefresh.Font = New Font("Prestige Elite Std", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnRefresh.Location = New Point(602, 526)
+        btnRefresh.Location = New Point(698, 526)
         btnRefresh.Name = "btnRefresh"
         btnRefresh.Size = New Size(104, 23)
         btnRefresh.TabIndex = 4
         btnRefresh.Text = "Refresh"
         btnRefresh.UseVisualStyleBackColor = True
         ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("Prestige Elite Std", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.DarkSlateGray
+        Label3.Location = New Point(15, 36)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(516, 22)
+        Label3.TabIndex = 1
+        Label3.Text = "ID | Title | Author | Subject | Year Published"
+        ' 
         ' BrowseForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.SandyBrown
+        BackgroundImage = My.Resources.Resources.wallpaper
+        BackgroundImageLayout = ImageLayout.Center
         ClientSize = New Size(1008, 561)
         Controls.Add(btnRefresh)
+        Controls.Add(Label3)
         Controls.Add(btnReturn)
         Controls.Add(Panel2)
         Controls.Add(Label1)
         Controls.Add(pnlEntryDisplay)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "BrowseForm"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Browse"
         pnlEntryDisplay.ResumeLayout(False)
         pnlEntryDisplay.PerformLayout()
@@ -284,6 +282,5 @@ Partial Class BrowseForm
     Friend WithEvents btnRefresh As Button
     Friend WithEvents lblEntry As Label
     Friend WithEvents btnResetFilters As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtBoxBookID As TextBox
+    Friend WithEvents Label3 As Label
 End Class
