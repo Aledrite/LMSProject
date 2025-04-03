@@ -16,7 +16,7 @@
         pnlUserList.Controls.Clear()
 
         Dim startPoint As New Point(3, 3)
-        Dim index As Integer = 0
+        Dim index = 0
 
         For Each iKey In GlobalVariables.Users.Keys
 
@@ -26,7 +26,7 @@
 
             newLabel.Font = templateLabel.Font
             newLabel.ForeColor = templateLabel.ForeColor
-            newLabel.Location = startPoint + New Point(0, (20 * index))
+            newLabel.Location = startPoint + New Point(0, 20 * index)
             newLabel.AutoSize = True
 
             newLabel.Text = iKey.ToString & " | " & userInfo("userName")
@@ -38,5 +38,35 @@
         Next
 
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnCheckRented.Click
+        If GlobalVariables.Users.ContainsKey(Val(txtBoxUserID.Text)) Then
+            If Not GlobalVariables.Users(Val(txtBoxUserID.Text))("userRentedBook") = Nothing Then
+                pnlDisplayRented.Controls.Clear()
+
+                Dim templateLabel = lblUser
+                Dim newLabel As New Label
+                Dim bookID = GlobalVariables.Users(Val(txtBoxUserID.Text))("userRentedBook")
+
+
+                Dim bookInfo = GlobalVariables.Books(bookID)
+
+
+                newLabel.Font = templateLabel.Font
+                newLabel.ForeColor = templateLabel.ForeColor
+                newLabel.Location = New Point(3, 3)
+                newLabel.AutoSize = True
+
+                newLabel.Text = bookID.ToString & " | " & bookInfo("bookName") & " | " & bookInfo("bookAuthor") & " | " & bookInfo("yearPublished")
+
+
+                pnlDisplayRented.Controls.Add(newLabel)
+            Else
+                MessageBox.Show("User does not rent any books!", "No Books Rented", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            End If
+        Else
+            MessageBox.Show("User does not exist!", "Invalid User ID", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 End Class

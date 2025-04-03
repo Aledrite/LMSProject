@@ -7,4 +7,6 @@ Public Class GlobalVariables
 
     Public Shared Users As New Dictionary(Of Integer, Dictionary(Of String, String))()
 
+    Public Shared UserRentedBooks As New Dictionary(Of Integer, Dictionary(Of Integer, Dictionary(Of String, String)))()
+
 End Class

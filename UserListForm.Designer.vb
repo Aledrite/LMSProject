@@ -28,8 +28,13 @@ Partial Class UserListForm
         Label1 = New Label()
         Label2 = New Label()
         pnlCheckRent = New Panel()
+        pnlDisplayRented = New Panel()
+        btnCheckRented = New Button()
+        lblAuthor = New Label()
+        txtBoxUserID = New TextBox()
         btnRefreshList = New Button()
         pnlUserList.SuspendLayout()
+        pnlCheckRent.SuspendLayout()
         SuspendLayout()
         ' 
         ' btnReturn
@@ -46,9 +51,9 @@ Partial Class UserListForm
         ' 
         pnlUserList.BackColor = Color.Peru
         pnlUserList.Controls.Add(lblUser)
-        pnlUserList.Location = New Point(12, 52)
+        pnlUserList.Location = New Point(15, 52)
         pnlUserList.Name = "pnlUserList"
-        pnlUserList.Size = New Size(481, 468)
+        pnlUserList.Size = New Size(870, 288)
         pnlUserList.TabIndex = 5
         ' 
         ' lblUser
@@ -79,7 +84,7 @@ Partial Class UserListForm
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Prestige Elite Std", 26.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.DarkSlateGray
-        Label2.Location = New Point(511, 9)
+        Label2.Location = New Point(12, 355)
         Label2.Name = "Label2"
         Label2.Size = New Size(374, 40)
         Label2.TabIndex = 8
@@ -88,15 +93,56 @@ Partial Class UserListForm
         ' pnlCheckRent
         ' 
         pnlCheckRent.BackColor = Color.Peru
-        pnlCheckRent.Location = New Point(511, 52)
+        pnlCheckRent.Controls.Add(pnlDisplayRented)
+        pnlCheckRent.Controls.Add(btnCheckRented)
+        pnlCheckRent.Controls.Add(lblAuthor)
+        pnlCheckRent.Controls.Add(txtBoxUserID)
+        pnlCheckRent.Location = New Point(15, 398)
         pnlCheckRent.Name = "pnlCheckRent"
-        pnlCheckRent.Size = New Size(374, 468)
+        pnlCheckRent.Size = New Size(870, 122)
         pnlCheckRent.TabIndex = 7
+        ' 
+        ' pnlDisplayRented
+        ' 
+        pnlDisplayRented.AutoScroll = True
+        pnlDisplayRented.BackColor = Color.SaddleBrown
+        pnlDisplayRented.Location = New Point(20, 66)
+        pnlDisplayRented.Name = "pnlDisplayRented"
+        pnlDisplayRented.Size = New Size(833, 46)
+        pnlDisplayRented.TabIndex = 11
+        ' 
+        ' btnCheckRented
+        ' 
+        btnCheckRented.Font = New Font("Prestige Elite Std", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnCheckRented.Location = New Point(725, 3)
+        btnCheckRented.Name = "btnCheckRented"
+        btnCheckRented.Size = New Size(128, 44)
+        btnCheckRented.TabIndex = 10
+        btnCheckRented.Text = "Check"
+        btnCheckRented.UseVisualStyleBackColor = True
+        ' 
+        ' lblAuthor
+        ' 
+        lblAuthor.AutoSize = True
+        lblAuthor.Font = New Font("Prestige Elite Std", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblAuthor.Location = New Point(20, 3)
+        lblAuthor.Name = "lblAuthor"
+        lblAuthor.Size = New Size(78, 18)
+        lblAuthor.TabIndex = 3
+        lblAuthor.Text = "User ID"
+        ' 
+        ' txtBoxUserID
+        ' 
+        txtBoxUserID.Location = New Point(20, 24)
+        txtBoxUserID.MaxLength = 6
+        txtBoxUserID.Name = "txtBoxUserID"
+        txtBoxUserID.Size = New Size(98, 23)
+        txtBoxUserID.TabIndex = 2
         ' 
         ' btnRefreshList
         ' 
         btnRefreshList.Font = New Font("Prestige Elite Std", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnRefreshList.Location = New Point(12, 526)
+        btnRefreshList.Location = New Point(757, 346)
         btnRefreshList.Name = "btnRefreshList"
         btnRefreshList.Size = New Size(128, 23)
         btnRefreshList.TabIndex = 9
@@ -117,10 +163,13 @@ Partial Class UserListForm
         Controls.Add(Label1)
         Controls.Add(pnlUserList)
         Controls.Add(btnReturn)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "UserListForm"
         Text = "User List"
         pnlUserList.ResumeLayout(False)
         pnlUserList.PerformLayout()
+        pnlCheckRent.ResumeLayout(False)
+        pnlCheckRent.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -132,4 +181,8 @@ Partial Class UserListForm
     Friend WithEvents pnlCheckRent As Panel
     Friend WithEvents lblUser As Label
     Friend WithEvents btnRefreshList As Button
+    Friend WithEvents pnlDisplayRented As Panel
+    Friend WithEvents btnCheckRented As Button
+    Friend WithEvents lblAuthor As Label
+    Friend WithEvents txtBoxUserID As TextBox
 End Class

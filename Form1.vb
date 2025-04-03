@@ -39,9 +39,18 @@
 
         Dim exampleUser As New Dictionary(Of String, String)
         exampleUser("userName") = "Ms. Reader Woman"
-        exampleUser("rentedBook") = ""
+        exampleUser("userRentedBook") = Nothing
 
         GlobalVariables.Users(124356) = exampleUser
 
+    End Sub
+
+    Private Sub btnRegisterUser_Click(sender As Object, e As EventArgs) Handles btnRegisterUser.Click
+        Me.Hide()
+        Register_User.Activate()
+        Register_User.Show()
+        If Me.WindowState = FormWindowState.Maximized Then
+            Register_User.WindowState = FormWindowState.Maximized
+        End If
     End Sub
 End Class

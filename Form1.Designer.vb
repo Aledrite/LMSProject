@@ -28,7 +28,7 @@ Partial Class Form1
         btnRegister = New Button()
         Label1 = New Label()
         PictureBox1 = New PictureBox()
-        Button1 = New Button()
+        btnRegisterUser = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -85,12 +85,12 @@ Partial Class Form1
         ' 
         ' Label1
         ' 
-        Label1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Label1.Anchor = AnchorStyles.Left
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Prestige Elite Std", 36F, FontStyle.Bold)
         Label1.ForeColor = Color.Black
-        Label1.Location = New Point(18, 485)
+        Label1.Location = New Point(12, 22)
         Label1.Name = "Label1"
         Label1.Size = New Size(458, 54)
         Label1.TabIndex = 3
@@ -98,32 +98,33 @@ Partial Class Form1
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.Anchor = AnchorStyles.Left
         PictureBox1.BackColor = Color.Transparent
         PictureBox1.Image = My.Resources.Resources.IconLogo
-        PictureBox1.Location = New Point(18, 24)
+        PictureBox1.Location = New Point(12, 79)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(300, 300)
+        PictureBox1.Size = New Size(440, 440)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 5
         PictureBox1.TabStop = False
         ' 
-        ' Button1
+        ' btnRegisterUser
         ' 
-        Button1.Anchor = AnchorStyles.Right
-        Button1.BackColor = Color.Transparent
-        Button1.FlatAppearance.BorderSize = 0
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Prestige Elite Std", 15.7499981F, FontStyle.Bold)
-        Button1.ForeColor = Color.Black
-        Button1.Image = CType(resources.GetObject("Button1.Image"), Image)
-        Button1.ImageAlign = ContentAlignment.MiddleRight
-        Button1.Location = New Point(756, 9)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(240, 273)
-        Button1.TabIndex = 6
-        Button1.Text = "Register User"
-        Button1.TextAlign = ContentAlignment.BottomCenter
-        Button1.UseVisualStyleBackColor = False
+        btnRegisterUser.Anchor = AnchorStyles.Right
+        btnRegisterUser.BackColor = Color.Transparent
+        btnRegisterUser.FlatAppearance.BorderSize = 0
+        btnRegisterUser.FlatStyle = FlatStyle.Flat
+        btnRegisterUser.Font = New Font("Prestige Elite Std", 15.7499981F, FontStyle.Bold)
+        btnRegisterUser.ForeColor = Color.Black
+        btnRegisterUser.Image = CType(resources.GetObject("btnRegisterUser.Image"), Image)
+        btnRegisterUser.ImageAlign = ContentAlignment.MiddleRight
+        btnRegisterUser.Location = New Point(756, 9)
+        btnRegisterUser.Name = "btnRegisterUser"
+        btnRegisterUser.Size = New Size(240, 273)
+        btnRegisterUser.TabIndex = 6
+        btnRegisterUser.Text = "Register User"
+        btnRegisterUser.TextAlign = ContentAlignment.BottomCenter
+        btnRegisterUser.UseVisualStyleBackColor = False
         ' 
         ' Form1
         ' 
@@ -133,7 +134,7 @@ Partial Class Form1
         BackgroundImage = My.Resources.Resources.wallpaper
         BackgroundImageLayout = ImageLayout.Center
         ClientSize = New Size(1008, 561)
-        Controls.Add(Button1)
+        Controls.Add(btnRegisterUser)
         Controls.Add(PictureBox1)
         Controls.Add(Label1)
         Controls.Add(btnRegister)
@@ -153,6 +154,6 @@ Partial Class Form1
     Friend WithEvents btnRegister As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnRegisterUser As Button
 
 End Class

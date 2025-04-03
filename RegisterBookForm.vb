@@ -53,4 +53,53 @@
             BrowseForm.WindowState = FormWindowState.Maximized
         End If
     End Sub
+
+    Private Sub btnRent_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+        Dim userID = Val(tbUserIdRent.Text)
+        Dim bookID = Val(tbBookIdRent.Text)
+
+        If GlobalVariables.Users.ContainsKey(userID) Then
+            If GlobalVariables.Books.ContainsKey(bookID) Then
+                If Not GlobalVariables.Users(userID).ContainsValue(bookID.ToString) Then
+                    If GlobalVariables.Users(userID)("userRentedBook") = Nothing Then
+                        GlobalVariables.Users(userID)("userRentedBook") = bookID.ToString
+                        MessageBox.Show("Successfully Rented Book.", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Else
+                        MessageBox.Show("User is already renting a different book!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    End If
+                Else
+                    MessageBox.Show("Book is already rented by this user.", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+                End If
+            Else
+                MessageBox.Show("Book does not exist or is not registered!", "Invalid Book ID", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Else
+            MessageBox.Show("User does not exist or is not registered!", "Invalid User ID", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim userID = Val(tbUserIdRent.Text)
+        Dim bookID = Val(tbBookIdRent.Text)
+
+        If GlobalVariables.Users.ContainsKey(userID) Then
+            If GlobalVariables.Books.ContainsKey(bookID) Then
+                If GlobalVariables.Users(userID).ContainsValue(bookID.ToString) Then
+                    GlobalVariables.Users(userID)("userRentedBook") = Nothing
+                    MessageBox.Show("Successfully Returned Book.", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                Else
+                    MessageBox.Show("Book is not rented by this user.", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                End If
+            Else
+                MessageBox.Show("Book does not exist or is not registered!", "Invalid Book ID", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Else
+            MessageBox.Show("User does not exist or is not registered!", "Invalid User ID", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
+    End Sub
 End Class
