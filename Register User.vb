@@ -5,12 +5,19 @@
 
         If Not GlobalVariables.Users.ContainsKey(userID) Then
 
-            Dim newUser As New Dictionary(Of String, String)
-            newUser("userName") = userName
-            newUser("userRentedBook") = Nothing
+            If Not userID <= 1 Then
+                Dim newUser As New Dictionary(Of String, String)
+                newUser("userName") = userName
+                newUser("userRentedBook") = Nothing
 
-            GlobalVariables.Users(userID) = newUser
-            MessageBox.Show("User registered!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                GlobalVariables.Users(userID) = newUser
+                MessageBox.Show("User registered!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("Please input a User ID greater than 0, or without incompatible symbols!", "Invalid ID.", MessageBoxButtons.OK, MessageBoxIcon.Error
+                                )
+            End If
+
+
         Else
             MessageBox.Show("A User with that ID already exists!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
@@ -22,4 +29,5 @@
         Dispose()
         Form1.Show()
     End Sub
+
 End Class
