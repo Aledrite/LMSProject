@@ -38,11 +38,11 @@ Partial Class Register_User
         ' 
         Label5.AutoSize = True
         Label5.BackColor = Color.Transparent
-        Label5.Font = New Font("Microsoft Sans Serif", 26.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Baskerville Old Face", 26.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.DarkSlateGray
         Label5.Location = New Point(12, 9)
         Label5.Name = "Label5"
-        Label5.Size = New Size(243, 39)
+        Label5.Size = New Size(215, 40)
         Label5.TabIndex = 13
         Label5.Text = "Register User"
         ' 
@@ -63,7 +63,7 @@ Partial Class Register_User
         ' Button1
         ' 
         Button1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-        Button1.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Baskerville Old Face", 11.25F, FontStyle.Bold)
         Button1.Location = New Point(436, 163)
         Button1.Name = "Button1"
         Button1.Size = New Size(101, 35)
@@ -93,10 +93,10 @@ Partial Class Register_User
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold)
         Label2.Location = New Point(24, 122)
         Label2.Name = "Label2"
-        Label2.Size = New Size(71, 20)
+        Label2.Size = New Size(68, 18)
         Label2.TabIndex = 4
         Label2.Text = "User ID"
         ' 
@@ -110,17 +110,17 @@ Partial Class Register_User
         ' lblBookName
         ' 
         lblBookName.AutoSize = True
-        lblBookName.Font = New Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblBookName.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold)
         lblBookName.Location = New Point(24, 26)
         lblBookName.Name = "lblBookName"
-        lblBookName.Size = New Size(98, 20)
+        lblBookName.Size = New Size(91, 18)
         lblBookName.TabIndex = 0
         lblBookName.Text = "User Name"
         ' 
         ' btnReturn
         ' 
         btnReturn.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-        btnReturn.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnReturn.Font = New Font("Baskerville Old Face", 11.25F, FontStyle.Bold)
         btnReturn.Location = New Point(361, 269)
         btnReturn.Name = "btnReturn"
         btnReturn.Size = New Size(188, 23)

@@ -59,11 +59,11 @@ Partial Class BrowseForm
         ' lblEntry
         ' 
         lblEntry.AutoSize = True
-        lblEntry.Font = New Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblEntry.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblEntry.ForeColor = Color.MintCream
         lblEntry.Location = New Point(3, 3)
         lblEntry.Name = "lblEntry"
-        lblEntry.Size = New Size(0, 20)
+        lblEntry.Size = New Size(0, 18)
         lblEntry.TabIndex = 0
         ' 
         ' Label1
@@ -71,11 +71,11 @@ Partial Class BrowseForm
         Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Microsoft Sans Serif", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Baskerville Old Face", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.DarkSlateGray
         Label1.Location = New Point(770, 9)
         Label1.Name = "Label1"
-        Label1.Size = New Size(160, 55)
+        Label1.Size = New Size(148, 54)
         Label1.TabIndex = 1
         Label1.Text = "Filters"
         ' 
@@ -101,7 +101,7 @@ Partial Class BrowseForm
         ' 
         ' btnResetFilters
         ' 
-        btnResetFilters.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnResetFilters.Font = New Font("Baskerville Old Face", 11.25F, FontStyle.Bold)
         btnResetFilters.Location = New Point(99, 414)
         btnResetFilters.Name = "btnResetFilters"
         btnResetFilters.Size = New Size(90, 35)
@@ -111,7 +111,7 @@ Partial Class BrowseForm
         ' 
         ' btnApplyFilter
         ' 
-        btnApplyFilter.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnApplyFilter.Font = New Font("Baskerville Old Face", 11.25F, FontStyle.Bold)
         btnApplyFilter.Location = New Point(3, 414)
         btnApplyFilter.Name = "btnApplyFilter"
         btnApplyFilter.Size = New Size(90, 35)
@@ -140,10 +140,10 @@ Partial Class BrowseForm
         ' lblYearPublished
         ' 
         lblYearPublished.AutoSize = True
-        lblYearPublished.Font = New Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblYearPublished.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold)
         lblYearPublished.Location = New Point(3, 203)
         lblYearPublished.Name = "lblYearPublished"
-        lblYearPublished.Size = New Size(130, 20)
+        lblYearPublished.Size = New Size(119, 18)
         lblYearPublished.TabIndex = 7
         lblYearPublished.Text = "Year Published"
         ' 
@@ -160,20 +160,20 @@ Partial Class BrowseForm
         ' lblSubject
         ' 
         lblSubject.AutoSize = True
-        lblSubject.Font = New Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblSubject.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold)
         lblSubject.Location = New Point(3, 137)
         lblSubject.Name = "lblSubject"
-        lblSubject.Size = New Size(70, 20)
+        lblSubject.Size = New Size(60, 18)
         lblSubject.TabIndex = 5
         lblSubject.Text = "Subject"
         ' 
         ' lblTitle
         ' 
         lblTitle.AutoSize = True
-        lblTitle.Font = New Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTitle.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold)
         lblTitle.Location = New Point(3, 74)
         lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(43, 20)
+        lblTitle.Size = New Size(43, 18)
         lblTitle.TabIndex = 3
         lblTitle.Text = "Title"
         ' 
@@ -187,10 +187,10 @@ Partial Class BrowseForm
         ' lblAuthor
         ' 
         lblAuthor.AutoSize = True
-        lblAuthor.Font = New Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblAuthor.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold)
         lblAuthor.Location = New Point(3, 17)
         lblAuthor.Name = "lblAuthor"
-        lblAuthor.Size = New Size(63, 20)
+        lblAuthor.Size = New Size(59, 18)
         lblAuthor.TabIndex = 1
         lblAuthor.Text = "Author"
         ' 
@@ -204,7 +204,7 @@ Partial Class BrowseForm
         ' btnReturn
         ' 
         btnReturn.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-        btnReturn.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnReturn.Font = New Font("Baskerville Old Face", 11.25F, FontStyle.Bold)
         btnReturn.Location = New Point(808, 526)
         btnReturn.Name = "btnReturn"
         btnReturn.Size = New Size(188, 23)
@@ -215,7 +215,7 @@ Partial Class BrowseForm
         ' btnRefresh
         ' 
         btnRefresh.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-        btnRefresh.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnRefresh.Font = New Font("Baskerville Old Face", 11.25F, FontStyle.Bold)
         btnRefresh.Location = New Point(698, 526)
         btnRefresh.Name = "btnRefresh"
         btnRefresh.Size = New Size(104, 23)
@@ -227,11 +227,11 @@ Partial Class BrowseForm
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Baskerville Old Face", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.DarkSlateGray
         Label3.Location = New Point(15, 36)
         Label3.Name = "Label3"
-        Label3.Size = New Size(411, 24)
+        Label3.Size = New Size(424, 22)
         Label3.TabIndex = 1
         Label3.Text = "ID | Title | Author | Subject | Year Published"
         ' 

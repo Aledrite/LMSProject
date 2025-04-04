@@ -53,4 +53,13 @@
             Register_User.WindowState = FormWindowState.Maximized
         End If
     End Sub
+
+    Private Sub btnCredits_Click(sender As Object, e As EventArgs) Handles btnCredits.Click
+        Me.Hide()
+        Credits.Activate()
+        Credits.Show()
+        If Me.WindowState = FormWindowState.Maximized Then
+            Credits.WindowState = FormWindowState.Maximized
+        End If
+    End Sub
 End Class

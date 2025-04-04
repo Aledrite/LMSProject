@@ -39,7 +39,7 @@ Partial Class UserListForm
         ' 
         ' btnReturn
         ' 
-        btnReturn.Font = New Font("Prestige Elite Std", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnReturn.Font = New Font("Baskerville Old Face", 11.25F, FontStyle.Bold)
         btnReturn.Location = New Point(697, 526)
         btnReturn.Name = "btnReturn"
         btnReturn.Size = New Size(188, 23)
@@ -59,7 +59,7 @@ Partial Class UserListForm
         ' lblUser
         ' 
         lblUser.AutoSize = True
-        lblUser.Font = New Font("Prestige Elite Std", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblUser.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblUser.ForeColor = Color.MintCream
         lblUser.Location = New Point(3, 3)
         lblUser.Name = "lblUser"
@@ -70,11 +70,11 @@ Partial Class UserListForm
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Prestige Elite Std", 26.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Baskerville Old Face", 26.25F, FontStyle.Bold)
         Label1.ForeColor = Color.DarkSlateGray
         Label1.Location = New Point(12, 9)
         Label1.Name = "Label1"
-        Label1.Size = New Size(206, 40)
+        Label1.Size = New Size(151, 40)
         Label1.TabIndex = 6
         Label1.Text = "User List"
         ' 
@@ -82,11 +82,11 @@ Partial Class UserListForm
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Prestige Elite Std", 26.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Baskerville Old Face", 26.25F, FontStyle.Bold)
         Label2.ForeColor = Color.DarkSlateGray
         Label2.Location = New Point(12, 355)
         Label2.Name = "Label2"
-        Label2.Size = New Size(374, 40)
+        Label2.Size = New Size(318, 40)
         Label2.TabIndex = 8
         Label2.Text = "Check Rented Book"
         ' 
@@ -113,7 +113,7 @@ Partial Class UserListForm
         ' 
         ' btnCheckRented
         ' 
-        btnCheckRented.Font = New Font("Prestige Elite Std", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnCheckRented.Font = New Font("Baskerville Old Face", 11.25F, FontStyle.Bold)
         btnCheckRented.Location = New Point(725, 3)
         btnCheckRented.Name = "btnCheckRented"
         btnCheckRented.Size = New Size(128, 44)
@@ -124,10 +124,10 @@ Partial Class UserListForm
         ' lblAuthor
         ' 
         lblAuthor.AutoSize = True
-        lblAuthor.Font = New Font("Prestige Elite Std", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblAuthor.Location = New Point(20, 3)
+        lblAuthor.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblAuthor.Location = New Point(20, 5)
         lblAuthor.Name = "lblAuthor"
-        lblAuthor.Size = New Size(78, 18)
+        lblAuthor.Size = New Size(68, 18)
         lblAuthor.TabIndex = 3
         lblAuthor.Text = "User ID"
         ' 
@@ -141,7 +141,7 @@ Partial Class UserListForm
         ' 
         ' btnRefreshList
         ' 
-        btnRefreshList.Font = New Font("Prestige Elite Std", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnRefreshList.Font = New Font("Baskerville Old Face", 11.25F, FontStyle.Bold)
         btnRefreshList.Location = New Point(757, 346)
         btnRefreshList.Name = "btnRefreshList"
         btnRefreshList.Size = New Size(128, 23)

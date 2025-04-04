@@ -2,7 +2,7 @@
     Private Sub UserListForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.ControlBox = False
 
-
+        refresh()
 
     End Sub
 
@@ -12,7 +12,7 @@
         Form1.Show()
     End Sub
 
-    Private Sub btnRefreshList_Click(sender As Object, e As EventArgs) Handles btnRefreshList.Click
+    Private Sub refresh()
         pnlUserList.Controls.Clear()
 
         Dim startPoint As New Point(3, 3)
@@ -36,7 +36,11 @@
             index += 1
 
         Next
+    End Sub
 
+    Private Sub btnRefreshList_Click(sender As Object, e As EventArgs) Handles btnRefreshList.Click
+
+        refresh()
 
     End Sub
 

@@ -12,8 +12,9 @@ Public Class BrowseForm
     Private Sub BrowseForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         ResetFilters()
-
+        refresh()
         Me.ControlBox = False
+
     End Sub
 
     Private Sub btnReturn_Click(sender As Object, e As EventArgs) Handles btnReturn.Click
@@ -22,8 +23,7 @@ Public Class BrowseForm
         Form1.Show()
     End Sub
 
-    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
-
+    Private Sub refresh()
         pnlEntryDisplay.Controls.Clear()
 
         Dim startPoint As New Point(3, 3)
@@ -77,6 +77,12 @@ Public Class BrowseForm
             End If
 
         Next
+    End Sub
+
+    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+
+        refresh()
+
     End Sub
 
     Private Sub applyFilter(sender As Object, e As EventArgs) Handles btnApplyFilter.Click
