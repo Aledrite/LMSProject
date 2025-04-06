@@ -123,6 +123,7 @@ Partial Class Credits
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(PictureBox1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "Credits"
         Text = "Credits"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
