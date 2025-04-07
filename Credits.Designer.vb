@@ -23,25 +23,15 @@ Partial Class Credits
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Credits))
-        PictureBox1 = New PictureBox()
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
         Label4 = New Label()
         Label5 = New Label()
         btnReturn = New Button()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        PictureBox2 = New PictureBox()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Anchor = AnchorStyles.Right
-        PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
-        PictureBox1.Location = New Point(400, -10)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(401, 452)
-        PictureBox1.TabIndex = 0
-        PictureBox1.TabStop = False
         ' 
         ' Label1
         ' 
@@ -93,7 +83,7 @@ Partial Class Credits
         Label5.AutoSize = True
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Segoe UI", 3.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(654, 443)
+        Label5.Location = New Point(699, 444)
         Label5.Name = "Label5"
         Label5.Size = New Size(146, 6)
         Label5.TabIndex = 5
@@ -103,30 +93,40 @@ Partial Class Credits
         ' 
         btnReturn.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         btnReturn.Font = New Font("Baskerville Old Face", 11.25F, FontStyle.Bold)
-        btnReturn.Location = New Point(12, 416)
+        btnReturn.Location = New Point(12, 458)
         btnReturn.Name = "btnReturn"
         btnReturn.Size = New Size(185, 22)
         btnReturn.TabIndex = 6
         btnReturn.Text = "Return To Main Menu"
         btnReturn.UseVisualStyleBackColor = True
         ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(513, -1)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(332, 442)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox2.TabIndex = 7
+        PictureBox2.TabStop = False
+        ' 
         ' Credits
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.wallpaper
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(845, 492)
+        Controls.Add(PictureBox2)
         Controls.Add(btnReturn)
         Controls.Add(Label5)
         Controls.Add(Label4)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "Credits"
         Text = "Credits"
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -138,4 +138,5 @@ Partial Class Credits
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents btnReturn As Button
+    Friend WithEvents PictureBox2 As PictureBox
 End Class
