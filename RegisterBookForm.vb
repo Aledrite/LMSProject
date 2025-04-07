@@ -44,12 +44,13 @@
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Me.Hide()
-        Me.Dispose()
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
+        Hide()
+        Dispose()
         BrowseForm.Activate()
         BrowseForm.Show()
-        If Me.WindowState = FormWindowState.Maximized Then
+
+        If WindowState = FormWindowState.Maximized Then
             BrowseForm.WindowState = FormWindowState.Maximized
         End If
     End Sub

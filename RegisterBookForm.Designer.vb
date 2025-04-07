@@ -45,7 +45,6 @@ Partial Class RegisterBookForm
         Button1 = New Button()
         Label5 = New Label()
         Label6 = New Label()
-        Button3 = New Button()
         Panel1.SuspendLayout()
         CType(nudYearPublished, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -94,7 +93,7 @@ Partial Class RegisterBookForm
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold)
+        Label4.Font = New Font("Baskerville Old Face", 12.0F, FontStyle.Bold)
         Label4.Location = New Point(3, 121)
         Label4.Name = "Label4"
         Label4.Size = New Size(118, 18)
@@ -104,7 +103,7 @@ Partial Class RegisterBookForm
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold)
+        Label3.Font = New Font("Baskerville Old Face", 12.0F, FontStyle.Bold)
         Label3.Location = New Point(294, 64)
         Label3.Name = "Label3"
         Label3.Size = New Size(104, 18)
@@ -132,7 +131,7 @@ Partial Class RegisterBookForm
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold)
+        Label2.Font = New Font("Baskerville Old Face", 12.0F, FontStyle.Bold)
         Label2.Location = New Point(294, 4)
         Label2.Name = "Label2"
         Label2.Size = New Size(72, 18)
@@ -149,7 +148,7 @@ Partial Class RegisterBookForm
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold)
+        Label1.Font = New Font("Baskerville Old Face", 12.0F, FontStyle.Bold)
         Label1.Location = New Point(3, 64)
         Label1.Name = "Label1"
         Label1.Size = New Size(59, 18)
@@ -166,7 +165,7 @@ Partial Class RegisterBookForm
         ' lblBookName
         ' 
         lblBookName.AutoSize = True
-        lblBookName.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold)
+        lblBookName.Font = New Font("Baskerville Old Face", 12.0F, FontStyle.Bold)
         lblBookName.Location = New Point(3, 10)
         lblBookName.Name = "lblBookName"
         lblBookName.Size = New Size(87, 18)
@@ -233,7 +232,7 @@ Partial Class RegisterBookForm
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold)
+        Label9.Font = New Font("Baskerville Old Face", 12.0F, FontStyle.Bold)
         Label9.Location = New Point(3, 64)
         Label9.Name = "Label9"
         Label9.Size = New Size(68, 18)
@@ -251,7 +250,7 @@ Partial Class RegisterBookForm
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Baskerville Old Face", 12F, FontStyle.Bold)
+        Label8.Font = New Font("Baskerville Old Face", 12.0F, FontStyle.Bold)
         Label8.Location = New Point(3, 10)
         Label8.Name = "Label8"
         Label8.Size = New Size(72, 18)
@@ -294,25 +293,13 @@ Partial Class RegisterBookForm
         Label6.TabIndex = 12
         Label6.Text = "Rent or Return"
         ' 
-        ' Button3
-        ' 
-        Button3.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-        Button3.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button3.Location = New Point(-366, 456)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(110, 20)
-        Button3.TabIndex = 14
-        Button3.Text = "Browse Books"
-        Button3.UseVisualStyleBackColor = True
-        ' 
         ' RegisterBookForm
         ' 
-        AutoScaleDimensions = New SizeF(6F, 13F)
+        AutoScaleDimensions = New SizeF(6.0F, 13.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.SandyBrown
         BackgroundImage = My.Resources.Resources.wallpaper
         ClientSize = New Size(488, 486)
-        Controls.Add(Button3)
         Controls.Add(Label6)
         Controls.Add(Label5)
         Controls.Add(Panel2)
@@ -348,7 +335,6 @@ Partial Class RegisterBookForm
     Friend WithEvents Button1 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Button3 As Button
     Friend WithEvents tbUserIdRent As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents tbBookIdRent As TextBox

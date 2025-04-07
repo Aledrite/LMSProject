@@ -43,6 +43,11 @@
 
         GlobalVariables.Users(124356) = exampleUser
 
+        btnBrowse.FlatAppearance.MouseOverBackColor = btnBrowse.BackColor
+        btnRegister.FlatAppearance.MouseOverBackColor = btnRegister.BackColor
+        btnRegisterUser.FlatAppearance.MouseOverBackColor = btnRegisterUser.BackColor
+        btnUsers.FlatAppearance.MouseOverBackColor = btnUsers.BackColor
+
     End Sub
 
     Private Sub btnRegisterUser_Click(sender As Object, e As EventArgs) Handles btnRegisterUser.Click
